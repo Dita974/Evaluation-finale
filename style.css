@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+h1{
+    color: teal;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
