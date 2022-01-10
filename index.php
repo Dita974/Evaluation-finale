@@ -46,7 +46,58 @@
     }
 
     ?>
-        <h2>Create new employe</h2>
+        
+         <!------------------------------ Formulaire ---------------------------->
+      <?php
+      require './Class/Form.php';
+      $form = new Form($_POST);
+      ?>
+      <section class="bg-whisper">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-lg-9 col-xl-7">
+              <div class="section-50 section-md-75 section-xl-100">
+              <h2>Create new employe</h2>
+                <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="
+                ">
+                  <div class="row row-30">
+
+                    <div class="col-md-6">
+                      <div class="form-wrap">
+                      <?php $form->createInput('name'); ?>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-wrap">
+                      <?php $form->createInput('surname'); ?>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-wrap">
+                        <?php $form->createInput('age'); ?>
+                      </div>
+                    </div>
+                    
+                    <div class="col-12">
+                      <div class="form-wrap">
+                      <?php $form->createInput('sex'); ?>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-wrap">
+                        <?php $form->createInput('contract'); ?>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-md-6">
+                        <?php $form->createSubmit('Send');?>
+                        </div>
+                      </div>
 
         <?php
         if(isset($_POST['name'], $_POST['surname'], $_POST['age'], $_POST['sex'], $_POST['contract'])) 
