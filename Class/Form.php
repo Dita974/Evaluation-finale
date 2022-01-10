@@ -34,20 +34,8 @@
 
         }
 
-        public function createInputPhone($key) {
-            echo '<label for='. $key . '>'. $key .' : </label>';
-            echo '<input type="number" class="form-input"  name="' . $key . '" value="'. $this->getValue($key).'"> '; 
-
-        }
-
-        public function createTextarea($key) {
-            echo '<label class="form-label" for='. $key . '>'. $key .' : </label>';
-            echo '<textarea class="form-input" id="feedback-2-message"  name="' . $key . '" value="'. $this->getValue($key).'"> '; 
-
-        }
-
         public function createSubmit($text) {
-            echo '<button type="submit"  class="button button-block button-primary">'.$text.'</button>';
+            echo '<button type="submit"  class="">'.$text.'</button>';
         }
  
     }

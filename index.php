@@ -20,12 +20,12 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <!------ fin cdn bootstrap ---------->
-        <title>My Movies List</title>
+        <title>Employees'List</title>
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
         <header>
-            <h1>Employes'List</h1>
+            <h1>Employees'List</h1>
 
         <?php foreach($employe as $key) {
         echo "<div class='card'>";
@@ -52,12 +52,12 @@
       require './Class/Form.php';
       $form = new Form($_POST);
       ?>
-      <section class="bg-whisper">
+      <section>
         <div class="container">
-          <div class="row">
+          <div id="new-employee" class="row d-flex justify-content-center">
             <div class="col-md-10 col-lg-9 col-xl-7">
               <div class="section-50 section-md-75 section-xl-100">
-              <h2>Create new employe</h2>
+              <h2>Create New Employee</h2>
                 <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="
                 ">
                   <div class="row row-30">
@@ -80,7 +80,7 @@
                       </div>
                     </div>
                     
-                    <div class="col-12">
+                    <div class="col-md-6">
                       <div class="form-wrap">
                       <?php $form->createInput('sex'); ?>
                       </div>
@@ -92,27 +92,43 @@
                       </div>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-md-6">
                       <div class="row">
                         <div class="col-md-6">
-                        <?php $form->createSubmit('Send');?>
+                        <?php $form->createSubmit('Create');?>
                         </div>
                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <?php
-        if(isset($_POST['name'], $_POST['surname'], $_POST['age'], $_POST['sex'], $_POST['contract'])) 
-        { 
-            if(!empty($_POST['name']) && !empty($_POST['surname']) && !empty( $_POST['age']) && !empty( $_POST['sex']) && !empty( $_POST['contract']))
-            {
-                $name = $_POST['name'];
-                $surname = $_POST['surname'];
-                $age = $_POST['age'];
-                $sex = $_POST['sex'];
-                $contract = $_POST['contract'];
-                            
-                echo "Welcome" . " " . "$name , $surname" . "<br>" . "your age is : " . "$age ," . "<br>" . "your sex is : " . "$sex" . "<br>" . "and your contract is : ". "$contract" . ".";
-            } else {
-                echo "Please enter your informations";
-            }             
-        }
-        ?>
+    <section>
+        <div class="container">
+          <div id="new-employee2" class="row d-flex justify-content-center">
+            <div class="col-md-10 col-lg-9 col-xl-7">
+              <div class="section-50 section-md-75 section-xl-100">
+
+                    <?php
+                    if(isset($_POST['name'], $_POST['surname'], $_POST['age'], $_POST['sex'], $_POST['contract'])) 
+                    { 
+                        if(!empty($_POST['name']) && !empty($_POST['surname']) && !empty( $_POST['age']) && !empty( $_POST['sex']) && !empty( $_POST['contract']))
+                        {
+                            $name = $_POST['name'];
+                            $surname = $_POST['surname'];
+                            $age = $_POST['age'];
+                            $sex = $_POST['sex'];
+                            $contract = $_POST['contract'];
+                                        
+                            echo "Welcome" . " " . "$name $surname, " . "<br>" . "your age is : " . "$age ," . "<br>" . "you are : " . "$sex" . "<br>" . "and your contract is : ". "$contract" . ".";
+                        } else {
+                            echo "Please enter your informations";
+                        }             
+                    }
+                    ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

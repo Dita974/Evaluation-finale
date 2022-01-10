@@ -9,7 +9,6 @@
         public $surname;
         private $age;
         public $sex;
-        // private $hiring_date;
         private $contract;
         
                 
@@ -18,7 +17,6 @@
             $this->surname = $surname;
             $this->age = $age;
             $this->sex = $sex;
-            // $this->hiring_date = $hiring_date;
             $this->contract = $contract;
         }
         
@@ -28,7 +26,6 @@
             echo 'surname : ' . $this->surname . '<br>';
             echo 'age : ' . $this->age . '<br>';
             echo 'sex : ' . $this->sex . '<br>';
-            // echo 'hiring date : ' . $this->hiring_date . '<br>';
             echo 'contract : ' . $this->contract . '<br>';
         }
 
@@ -40,11 +37,11 @@
             return $this->contract;
         }
 
-        private function setAge($key, $value) {
-            
+        private function setAge($x) {
+            $this->age = $x;
         }
-        private function setContract($key, $value) {
-            
+        private function setContract($y) {
+            $this->contract = $y;
         }
 
       

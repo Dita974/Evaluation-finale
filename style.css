@@ -6,6 +6,37 @@
 }
 h1,h2{
     color: teal;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#new-employee{
+    margin: auto;
+    border: 2px solid teal;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 128, 128, 0.226);
+}
+#new-employee2{
+    margin: auto;
+    border: 2px solid teal;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgb(0, 128, 128);
+    align-items:center;
+    color:#fff;
+}
+input{
+    margin: 10px;
+    border-radius: 8px;
+    outline-color: teal;
+    caret-color: teal;
+}
+button{
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: teal;
+    color: #fff;
+    border-radius: 8px;
 }
