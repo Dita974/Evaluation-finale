@@ -6,7 +6,7 @@
 
     $employe = $requete->fetchAll(PDO::FETCH_ASSOC);
 
-    // print_r($resultat);
+    // print_r($employe);
     ?>
 
 <!DOCTYPE html>
@@ -49,16 +49,17 @@
         <h2>Create new employe</h2>
 
         <?php
-        if(isset($_POST['name'], $_POST['surname'], $_POST['age'], $_POST['sex'])) 
+        if(isset($_POST['name'], $_POST['surname'], $_POST['age'], $_POST['sex'], $_POST['contract'])) 
         { 
-            if(!empty($_POST['name']) && !empty($_POST['surname']) && !empty( $_POST['age']) && !empty( $_POST['sex']))
+            if(!empty($_POST['name']) && !empty($_POST['surname']) && !empty( $_POST['age']) && !empty( $_POST['sex']) && !empty( $_POST['contract']))
             {
                 $name = $_POST['name'];
-                $phone = $_POST['phone'];
-                $email = $_POST['email'];
-                $message = $_POST['message'];
+                $surname = $_POST['surname'];
+                $age = $_POST['age'];
+                $sex = $_POST['sex'];
+                $contract = $_POST['contract'];
                             
-                echo "Welcome" . " " . "$name ," . "<br>" . "your phone number is : " . "$phone ," . "<br>" . "your email is : " . "$email" . "<br>" . "and your message is : ". "$message" . ".";
+                echo "Welcome" . " " . "$name , $surname" . "<br>" . "your age is : " . "$age ," . "<br>" . "your sex is : " . "$sex" . "<br>" . "and your contract is : ". "$contract" . ".";
             } else {
                 echo "Please enter your informations";
             }             

@@ -3,7 +3,6 @@
     /**
      * Voici ma classe Form 
      */
-    
     class Form {
         
         private $data;
