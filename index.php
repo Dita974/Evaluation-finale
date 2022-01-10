@@ -44,4 +44,23 @@
         echo "</div>";
         echo "<br>";
     }
-?>
+
+    ?>
+        <h2>Create new employe</h2>
+
+        <?php
+        if(isset($_POST['name'], $_POST['surname'], $_POST['age'], $_POST['sex'])) 
+        { 
+            if(!empty($_POST['name']) && !empty($_POST['surname']) && !empty( $_POST['age']) && !empty( $_POST['sex']))
+            {
+                $name = $_POST['name'];
+                $phone = $_POST['phone'];
+                $email = $_POST['email'];
+                $message = $_POST['message'];
+                            
+                echo "Welcome" . " " . "$name ," . "<br>" . "your phone number is : " . "$phone ," . "<br>" . "your email is : " . "$email" . "<br>" . "and your message is : ". "$message" . ".";
+            } else {
+                echo "Please enter your informations";
+            }             
+        }
+        ?>
